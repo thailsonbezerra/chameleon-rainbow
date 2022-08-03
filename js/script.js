@@ -1,6 +1,3 @@
-import { SlideNav } from './slide.js';
+import initSlide from './slide.js';
 
-const slide = new SlideNav();
-slide.init();
-
-slide.addControl();
+initSlide();
