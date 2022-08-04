@@ -5,7 +5,9 @@
 }
 
 .slide-wrapper {
+  margin-top: 40px;
   overflow: hidden;
+  position: relative;
 }
 
 .slide {
@@ -65,4 +67,25 @@ img {
 [data-control='slide'] li.active a,
 [data-control='slide'] li a:hover {
   background: gray;
+}
+
+.prev,
+.next {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  opacity: 0.8;
+  padding: 8px;
+  background: #000 url('../img/arrow.svg') center center no-repeat;
+  height: 60%;
+  margin: auto 0;
+}
+
+.prev {
+  left: 0;
+  transform: rotate(180deg);
+}
+
+.next {
+  right: 0;
 }
