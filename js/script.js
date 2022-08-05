@@ -1,3 +1,6 @@
-import initSlide from './slide.js';
+import { init } from './slide.js';
+import { addArrowEvent, addControl } from './slideNav.js';
 
-initSlide();
+init();
+addArrowEvent();
+addControl();
