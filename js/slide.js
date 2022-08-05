@@ -1,4 +1,5 @@
 import debounce from './debounce.js';
+import { chameleonColorSlide } from './slideColor.js';
 
 const slide = document.querySelector('.slide');
 export const wrapper = document.querySelector('.slide-wrapper');
@@ -108,6 +109,7 @@ export const changeSlide = (index) => {
   dist.finalPosition = activeSlide.position;
   changeActiveClass();
   wrapper.dispatchEvent(changeEvent);
+  chameleonColorSlide();
 };
 
 const changeActiveClass = () => {
@@ -137,7 +139,7 @@ const addResizeEvent = () => {
 };
 
 export const init = () => {
-  changeSlide(3);
+  changeSlide(2);
   addSlideEvents();
   slidesConfig();
   addResizeEvent();
