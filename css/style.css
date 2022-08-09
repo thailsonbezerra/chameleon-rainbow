@@ -4,12 +4,7 @@
   box-sizing: border-box;
 }
 
-body {
-  background-color: #000;
-}
-
 .slide-wrapper {
-  margin-top: 40px;
   overflow: hidden;
   position: relative;
 }
@@ -17,8 +12,7 @@ body {
 .slide {
   list-style: none;
   display: flex;
-  height: 70vh;
-  margin: 40px 0;
+  height: 100vh;
 }
 
 .slide:hover {
@@ -26,12 +20,10 @@ body {
 }
 
 .slide li {
-  width: 80vw;
-  max-width: 800px;
+  width: 100vw;
   flex-shrink: 0;
   border-radius: 4px;
   overflow: hidden;
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
   margin: 0 20px;
   opacity: 0.8;
   transform: scale(0.8);

@@ -4,7 +4,6 @@ import {
   activePrevSlide,
   changeSlide,
   indexObj,
-  slideArray,
   wrapper,
 } from './slide.js';
 
@@ -18,14 +17,12 @@ export const addArrowEvent = () => {
 
 const createControl = () => {
   const control = document.createElement('ul');
-  control.dataset.control = 'slide';
+  /*control.dataset.control = 'slide';
   slideArray.forEach((item, index) => {
     control.innerHTML += `<li><a href="#slide${index + 1}">${
       index + 1
     }</a></li>`;
-  });
-
-  wrapper.appendChild(control);
+  }*/ wrapper.appendChild(control);
   return control;
 };
 
