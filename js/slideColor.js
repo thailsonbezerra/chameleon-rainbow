@@ -10,14 +10,14 @@ export const colors = {
   yellow: '#fad403',
 };
 
-const chameleons = document.querySelectorAll('.slide li');
+export const chameleons = document.querySelectorAll('.slide li');
 
 export const chameleonColorSlide = () => {
   chameleons.forEach((chameleon) => {
     if (chameleon.classList.value === 'active') {
       const chameleonImg = chameleon.querySelector('img').attributes.src.value;
       const chameleonColor = chameleonImg
-        .replace('img/camaleos/', '')
+        .replace('img/chameleons/', '')
         .replace('.png', '');
 
       changeColor(chameleonColor, chameleonImg, chameleon);
@@ -35,7 +35,7 @@ export const changeColor = (color, chameleonImg, chameleon) => {
 
     setTimeout(() => {
       chameleon.querySelector('img').attributes.src.value =
-        chameleonImg.replace('camaleos', 'bgBlack');
+        chameleonImg.replace('chameleons', 'bgBlack');
     }, 2000);
-  }, 3000);
+  }, 1500);
 };

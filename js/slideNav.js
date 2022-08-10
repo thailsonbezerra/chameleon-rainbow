@@ -5,6 +5,7 @@ import {
   changeSlide,
   indexObj,
   wrapper,
+  slideArray,
 } from './slide.js';
 
 const prevElement = document.querySelector('.prev');
@@ -17,12 +18,18 @@ export const addArrowEvent = () => {
 
 const createControl = () => {
   const control = document.createElement('ul');
-  /*control.dataset.control = 'slide';
+  control.dataset.control = 'slide';
   slideArray.forEach((item, index) => {
-    control.innerHTML += `<li><a href="#slide${index + 1}">${
+    const cristalImgHTML = item.element.innerHTML.replace(
+      'chameleons',
+      'previews',
+    );
+    control.innerHTML += `<li><a href="#slide${
       index + 1
-    }</a></li>`;
-  }*/ wrapper.appendChild(control);
+    }">${cristalImgHTML}</a></li>`;
+    const slidePreview = document.querySelector('.slide-preview');
+    slidePreview.appendChild(control);
+  });
   return control;
 };
 
