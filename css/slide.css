@@ -1,0 +1,30 @@
+.slide-wrapper {
+  overflow: hidden;
+  position: relative;
+}
+
+.slide {
+  list-style: none;
+  display: flex;
+  height: 100vh;
+}
+
+.slide:hover {
+  will-change: transform;
+}
+
+.slide li {
+  width: 100vw;
+  flex-shrink: 0;
+  border-radius: 4px;
+  overflow: hidden;
+  margin: 0 20px;
+  opacity: 0.8;
+  transform: scale(0.8);
+  transition: 0.4s;
+}
+
+.slide li.active {
+  opacity: 1;
+  transform: scale(1);
+}

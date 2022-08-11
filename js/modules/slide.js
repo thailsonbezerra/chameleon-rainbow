@@ -139,7 +139,7 @@ const addResizeEvent = () => {
 };
 
 export const init = () => {
-  changeSlide(2);
+  changeSlide(3);
   addSlideEvents();
   slidesConfig();
   addResizeEvent();

@@ -1,0 +1,39 @@
+.prev,
+.next {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  opacity: 0.8;
+  padding: 12px;
+  background: url('../img/arrow.svg') center center no-repeat;
+  height: 60%;
+  margin: auto 12px;
+  background-color: #333;
+  opacity: 70%;
+  border-radius: 3px;
+}
+
+.prev {
+  left: 0;
+  transform: rotate(180deg);
+}
+
+.next {
+  right: 0;
+}
+
+@media (max-width: 920px) {
+  .prev,
+  .next {
+    height: 45%;
+  }
+}
+
+@media (max-width: 630px) {
+  .prev,
+  .next {
+    height: 30%;
+    margin: auto 8px;
+    padding: 8px;
+  }
+}

@@ -1,5 +1,5 @@
-import { init } from './slide.js';
-import { addArrowEvent, addControl } from './slideNav.js';
+import { init } from './modules/slide.js';
+import { addArrowEvent, addControl } from './modules/slideNav.js';
 
 init();
 addArrowEvent();

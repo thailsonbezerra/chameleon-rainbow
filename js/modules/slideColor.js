@@ -30,12 +30,12 @@ export const changeColor = (color, chameleonImg, chameleon) => {
   slide.style.transition = 'background-color 0s';
   slide.style.backgroundColor = colors[color];
   setTimeout(() => {
-    slide.style.transition = 'background-color 2s';
+    slide.style.transition = 'background-color 3s';
     slide.style.backgroundColor = '#000';
 
     setTimeout(() => {
       chameleon.querySelector('img').attributes.src.value =
         chameleonImg.replace('chameleons', 'bgBlack');
-    }, 2000);
-  }, 1500);
+    }, 1500);
+  }, 3000);
 };
