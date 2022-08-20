@@ -1,0 +1,11 @@
+Model Information:
+* title:	Ready for meal
+* source:	https://sketchfab.com/3d-models/ready-for-meal-0cc48298504048f3b556a4eeefba1449
+* author:	halenpet (https://sketchfab.com/halenpet)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Ready for meal" (https://sketchfab.com/3d-models/ready-for-meal-0cc48298504048f3b556a4eeefba1449) by halenpet (https://sketchfab.com/halenpet) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
