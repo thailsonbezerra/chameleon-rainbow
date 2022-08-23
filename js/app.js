@@ -5,19 +5,19 @@ let scene;
 let chameleon;
 
 function init() {
-  container = document.querySelector(".scene");
+  container = document.querySelector('.container');
 
   //Create scene
   scene = new THREE.Scene();
 
-  const fov = 35;
+  const fov = 50;
   const aspect = container.clientWidth / container.clientHeight;
   const near = 0.1;
   const far = 1000;
 
   //Camera setup
   camera = new THREE.PerspectiveCamera(fov, aspect, near, far);
-  camera.position.set(0, 0, 5);
+  camera.position.set(-0.7, 0, 2);
 
   const ambient = new THREE.AmbientLight(0x404040, 2);
   scene.add(ambient);
@@ -37,7 +37,7 @@ function init() {
   container.appendChild(renderer.domElement);
   //Load Model
   let loader = new THREE.GLTFLoader();
-  loader.load("../3d/scene.gltf", function (gltf) {
+  loader.load('../3d/scene.gltf', function (gltf) {
     scene.add(gltf.scene);
     chameleon = gltf.scene.children[0];
     animate();
@@ -58,4 +58,13 @@ function onWindowResize() {
   renderer.setSize(container.clientWidth, container.clientHeight);
 }
 
-window.addEventListener("resize", onWindowResize);
+window.addEventListener('resize', onWindowResize);
+window.onload = function () {
+  Particles.init({
+    selector: '.background',
+    color: '#73b34d',
+    // connectParticles: true,
+    maxParticles: 300,
+    speed: 1,
+  });
+};
