@@ -35,7 +35,7 @@ export const changeColor = (color, chameleonImg, chameleon) => {
 
     setTimeout(() => {
       chameleon.querySelector('img').attributes.src.value =
-        chameleonImg.replace('chameleons', 'bgBlack');
+        chameleonImg.replace('chameleons', 'bgblack');
     }, 1500);
   }, 3000);
 };
