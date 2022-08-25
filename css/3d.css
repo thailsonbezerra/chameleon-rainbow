@@ -9,13 +9,14 @@
   box-sizing: border-box;
 }
 
-html {
-  background-color: #1a250f;
-}
+/* html {
+  background-color: #;
+} */
 
-body {
+.container-bg {
   font-family: sans-serif;
-  background: url('../img/leafdesenho.png');
+  background: #1a250f url('../img/leafdesenho.png') no-repeat;
+  background-size: cover;
 }
 
 h1 {
@@ -64,7 +65,7 @@ h2 span:hover {
 }
 
 .title {
-  padding: 40px 0;
+  padding: 20px 0;
   z-index: 2;
   text-align: center;
 }
@@ -75,11 +76,12 @@ canvas {
 }
 
 .container {
+  max-width: 1297px;
   display: flex;
-  max-width: 1500px;
   margin: 0 auto;
   padding: 0 20px;
   align-items: center;
+  justify-content: space-between;
   height: 100vh;
 }
 
@@ -89,4 +91,9 @@ canvas {
   top: 0;
   left: 0;
   z-index: 0;
+}
+
+canvas[data-engine='three.js r143'] {
+  max-width: 1300px;
+  margin: 0 auto;
 }
