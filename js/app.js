@@ -37,7 +37,7 @@ function init() {
   container.appendChild(renderer.domElement);
   //Load Model
   let loader = new THREE.GLTFLoader();
-  loader.load('../../../3d/scene.gltf', function (gltf) {
+  loader.load('3d/scene.gltf', function (gltf) {
     scene.add(gltf.scene);
     chameleon = gltf.scene.children[0];
     animate();
