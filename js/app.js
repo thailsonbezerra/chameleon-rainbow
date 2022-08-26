@@ -17,7 +17,7 @@ function init() {
 
   //Camera setup
   camera = new THREE.PerspectiveCamera(fov, aspect, near, far);
-  camera.position.set(-1, 0, 2);
+  camera.position.set(-0.7, 0, 2);
 
   const ambient = new THREE.AmbientLight(0x404040, 2);
   scene.add(ambient);
@@ -65,12 +65,13 @@ function onWindowResize() {
     camera.fov = 90;
   }
 
-  if (window.innerWidth < 590) {
+  if (window.innerWidth <= 590) {
+    //1090
     camera.position.set(0, 0, 2);
-  } else if (window.innerWidth < 885) {
-    camera.position.set(-0.8, 0, 2);
+  } else if (window.innerWidth <= 1090) {
+    camera.position.set(-0.8, 0, 2.5);
   } else {
-    camera.position.set(-1, 0, 2);
+    camera.position.set(-0.7, 0, 2);
   }
 
   camera.aspect = container.clientWidth / container.clientHeight;
