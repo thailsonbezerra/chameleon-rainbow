@@ -55,16 +55,16 @@ init();
 
 function handleSizeViewport() {
   //responsive size chameleon
-  if (innerWidth >= 1297) {
-    camera.fov = 50;
-  } else if (innerWidth < 1297 && innerWidth > 940) {
-    camera.fov = 60;
-  } else if (innerWidth <= 940 && innerWidth > 700) {
-    camera.fov = 70;
+  if (innerWidth <= 590) {
+    camera.fov = 90;
   } else if (innerWidth <= 700 && innerWidth > 590) {
     camera.fov = 80;
+  } else if (innerWidth <= 940 && innerWidth > 700) {
+    camera.fov = 70;
+  } else if (innerWidth < 1297 && innerWidth > 940) {
+    camera.fov = 60;
   } else {
-    camera.fov = 90;
+    camera.fov = 50;
   }
 
   //responsive position chameleon
