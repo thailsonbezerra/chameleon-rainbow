@@ -10,7 +10,7 @@ function init() {
   //Create scene
   scene = new THREE.Scene();
 
-  const fov = 50;
+  let fov;
   const aspect = container.clientWidth / container.clientHeight;
   const near = 0.1;
   const far = 1000;
@@ -42,7 +42,6 @@ function init() {
     chameleon = gltf.scene.children[0];
     animate();
   });
-
   handleSizeViewport();
 }
 
@@ -56,29 +55,22 @@ init();
 
 function handleSizeViewport() {
   //responsive size chameleon
-  if (window.innerWidth >= 1297) {
+  if (innerWidth >= 1297) {
     camera.fov = 50;
-  } else if (window.innerWidth < 1297 && window.innerWidth > 940) {
+  } else if (innerWidth < 1297 && innerWidth > 940) {
     camera.fov = 60;
-  } else if (window.innerWidth <= 940 && window.innerWidth > 700) {
+  } else if (innerWidth <= 940 && innerWidth > 700) {
     camera.fov = 70;
-  } else if (window.innerWidth <= 700 && window.innerWidth > 590) {
+  } else if (innerWidth <= 700 && innerWidth > 590) {
     camera.fov = 80;
   } else {
     camera.fov = 90;
   }
 
   //responsive position chameleon
-  if (window.innerWidth <= 590) {
-    camera.position.set(0, 0, 2);
-  } else if (window.innerWidth <= 1090) {
-    camera.position.set(-0.8, 0, 2.5);
-  } else {
-    camera.position.set(-0.7, 0, 2);
-  }
-
   //change orientation mobile
-  if (innerWidth < innerHeight) camera.position.set(0, 0, 2);
+  if (innerWidth < innerHeight || innerWidth <= 590)
+    camera.position.set(0, 0, 2);
   else camera.position.set(-1.1, 0, 2);
 }
 
