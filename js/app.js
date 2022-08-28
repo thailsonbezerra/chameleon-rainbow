@@ -10,11 +10,10 @@ function init() {
   //Create scene
   scene = new THREE.Scene();
 
-  let fov;
+  let fov = responsiveFovChameleon();
   const aspect = container.clientWidth / container.clientHeight;
   const near = 0.1;
   const far = 1000;
-
   //Camera setup
   camera = new THREE.PerspectiveCamera(fov, aspect, near, far);
   camera.position.set(-0.7, 0, 2);
@@ -35,6 +34,7 @@ function init() {
   renderer.setPixelRatio(window.devicePixelRatio);
 
   container.appendChild(renderer.domElement);
+
   //Load Model
   let loader = new THREE.GLTFLoader();
   loader.load("3d/scene.gltf", function (gltf) {
@@ -42,7 +42,6 @@ function init() {
     chameleon = gltf.scene.children[0];
     animate();
   });
-  handleSizeViewport();
 }
 
 function animate() {
@@ -51,27 +50,29 @@ function animate() {
   renderer.render(scene, camera);
 }
 
-init();
-
 function handleSizeViewport() {
-  //responsive size chameleon
-  if (innerWidth <= 590) {
-    camera.fov = 90;
-  } else if (innerWidth <= 700 && innerWidth > 590) {
-    camera.fov = 80;
-  } else if (innerWidth <= 940 && innerWidth > 700) {
-    camera.fov = 70;
-  } else if (innerWidth < 1297 && innerWidth > 940) {
-    camera.fov = 60;
-  } else {
-    camera.fov = 50;
-  }
-
+  camera.fov = responsiveFovChameleon();
   //responsive position chameleon
   //change orientation mobile
   if (innerWidth < innerHeight || innerWidth <= 590)
     camera.position.set(0, 0, 2);
   else camera.position.set(-1.1, 0, 2);
+}
+
+function responsiveFovChameleon() {
+  let cameraFov;
+  if (innerWidth <= 590) {
+    cameraFov = 90;
+  } else if (innerWidth <= 700 && innerWidth > 590) {
+    cameraFov = 80;
+  } else if (innerWidth <= 940 && innerWidth > 700) {
+    cameraFov = 70;
+  } else if (innerWidth < 1297 && innerWidth > 940) {
+    cameraFov = 60;
+  } else {
+    cameraFov = 50;
+  }
+  return cameraFov;
 }
 
 function onWindowResize() {
@@ -86,8 +87,9 @@ window.onload = function () {
   Particles.init({
     selector: ".background",
     color: "#73b34d",
-    // connectParticles: true,
     maxParticles: 300,
     speed: 1,
   });
+  handleSizeViewport();
 };
+init();
