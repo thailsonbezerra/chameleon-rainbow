@@ -6,6 +6,7 @@
 }
 
 body {
+  background: #1a250f;
   overflow: hidden;
 }
 
@@ -91,6 +92,16 @@ canvas {
   }
 }
 
+@media (max-width: 800px) {
+  h1 {
+    font-size: 5.5em;
+  }
+
+  h2 {
+    font-size: 3.5em;
+  }
+}
+
 @media (max-width: 700px) {
   h1 {
     font-size: 5em;
@@ -116,5 +127,15 @@ canvas {
 
   h2 {
     font-size: 2em;
+  }
+}
+
+@media (max-width: 300px) {
+  h1 {
+    font-size: 3em;
+  }
+
+  h2 {
+    font-size: 1.5em;
   }
 }
