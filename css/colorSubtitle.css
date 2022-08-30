@@ -1,22 +1,22 @@
 .R:hover {
-  color: red;
+  color: #ff0000;
 }
 
 .A:hover {
-  color: orange;
+  color: #ff7f00;
 }
 .I:hover {
-  color: yellow;
+  color: #ffff00;
 }
 .N:hover {
-  color: green;
+  color: #00ff00;
 }
 .B:hover {
-  color: blue;
+  color: #00ffff;
 }
 .O:hover {
-  color: indigo;
+  color: #0000ff;
 }
 .W:hover {
-  color: violet;
+  color: #8b00ff;
 }

@@ -1,4 +1,4 @@
-@import "colorSubtitle.css";
+@import 'colorSubtitle.css';
 
 @font-face {
   font-family: Bazar;
@@ -11,12 +11,12 @@ body {
 
 .container-bg {
   font-family: sans-serif;
-  background: #1a250f url("../img/leafdesenho.png") no-repeat;
+  background: #1a250f url('../img/leafdesenho.png') no-repeat;
   background-size: cover;
 }
 
 .container {
-  max-width: 1297px;
+  /* max-width: 1297px; */
   display: flex;
   margin: 0 auto;
   padding: 0 20px;
@@ -55,7 +55,7 @@ h2 span:hover {
 }
 
 .background {
-  /*position: absolute;*/
+  position: absolute;
   display: block;
   top: 0;
   left: 0;
