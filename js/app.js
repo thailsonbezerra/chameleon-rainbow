@@ -68,7 +68,8 @@ function handleSizeViewport() {
     }
   } else {
     // "portrait-primary"
-    if (container.clientHeight > 1000) camera.position.set(-1, 0, 3);
+
+    if (screen.height > 1000) camera.position.set(-1, 0, 3);
     else camera.position.set(0, 0, 2);
   }
 }
