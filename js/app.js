@@ -56,7 +56,7 @@ function handleSizeViewport() {
 
   //responsive position chameleon
   //change orientation mobile
-  let orientation = screen.orientation || undefined;
+  let orientation = screen.orientation || {};
   console.log(orientation.type);
   //ANDROIDS E WEB (PAISAGEM/HORIZONTAL)
   if (orientation.type === 'landscape-primary') {
