@@ -59,6 +59,7 @@ function handleSizeViewport() {
     (screen.orientation || {}).type ||
     screen.mozOrientation ||
     screen.msOrientation;
+  console.log(orientation);
   if (orientation === 'landscape-primary') {
     if (screnSize === innerHeight + innerWidth) {
       camera.position.set(-1.1, 0, 2);
