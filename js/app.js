@@ -52,9 +52,14 @@ function animate() {
 const screnSize = innerHeight + innerWidth;
 function handleSizeViewport() {
   camera.fov = responsiveFovChameleon();
+
   //responsive position chameleon
   //change orientation mobile
-  if (screen.orientation.type === 'landscape-primary') {
+  let orientation =
+    (screen.orientation || {}).type ||
+    screen.mozOrientation ||
+    screen.msOrientation;
+  if (orientation === 'landscape-primary') {
     if (screnSize === innerHeight + innerWidth) {
       camera.position.set(-1.1, 0, 2);
     } else {
