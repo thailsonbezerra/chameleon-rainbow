@@ -49,15 +49,16 @@ function animate() {
   chameleon.rotation.z += 0.005;
   renderer.render(scene, camera);
 }
-const screnSize = innerHeight + innerWidth;
+const screnSize = screen.width + screen.height;
+console.log(screnSize);
 function handleSizeViewport() {
   camera.fov = responsiveFovChameleon();
 
   //responsive position chameleon
   //change orientation mobile
-  let orientation =
-    screen.msOrientation || screen.orientation || screen.mozOrientation || {};
+  let orientation = screen.orientation || undefined;
   console.log(orientation.type);
+  //ANDROIDS E WEB (PAISAGEM/HORIZONTAL)
   if (orientation.type === 'landscape-primary') {
     if (screnSize === innerHeight + innerWidth) {
       camera.position.set(-1.1, 0, 2);
@@ -70,29 +71,26 @@ function handleSizeViewport() {
         camera.position.set(-0.7, 0, 2);
       }
     }
-    console.log(`landscape-primary
-    ${screen.height} deitado`);
-
-    //ios
-  } else if (orientation.type === undefined) {
-    if (innerWidth <= 590) {
+  }
+  //ANDROIDS (RETO/VERTICAL)
+  else if (orientation.type === 'portrait-primary') {
+    if (screen.height > 1000) {
+      camera.position.set(-1, 0, 3);
+    } else {
+      camera.position.set(0, 0, 2);
+    }
+  }
+  //IOS
+  else {
+    if (innerHeight > 1000) {
+      camera.position.set(-1, 0, 3);
+    } else if (innerWidth <= 590) {
       camera.position.set(0, 0, 2);
     } else if (innerWidth <= 1090) {
       camera.position.set(-1.1, 0, 2.5);
     } else {
       camera.position.set(-0.7, 0, 2);
     }
-  } else {
-    // "portrait-primary"
-
-    if (screen.height > 1000) {
-      camera.position.set(-1, 0, 3);
-    } else {
-      camera.position.set(0, 0, 2);
-    }
-
-    console.log(`portrait-primary
-    ${screen.height} em pé`);
   }
 }
 
