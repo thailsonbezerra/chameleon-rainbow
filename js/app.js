@@ -5,7 +5,7 @@ let scene;
 let chameleon;
 
 function init() {
-  container = document.querySelector('.container');
+  container = document.querySelector(".container");
 
   const { type } = screen.orientation;
   console.log(`Fullscreen and locked to ${type}. Ready!`);
@@ -40,7 +40,7 @@ function init() {
 
   //Load Model
   let loader = new THREE.GLTFLoader();
-  loader.load('3d/scene.gltf', function (gltf) {
+  loader.load("3d/scene.gltf", function (gltf) {
     scene.add(gltf.scene);
     chameleon = gltf.scene.children[0];
     animate();
@@ -54,19 +54,16 @@ function animate() {
 }
 const screnSize = innerHeight + innerWidth;
 function handleSizeViewport() {
-  console.log(screen.orientation);
   camera.fov = responsiveFovChameleon();
   //responsive position chameleon
-
   //change orientation mobile
-
-  if (screen.orientation.type === 'landscape-primary') {
+  if (screen.orientation.type === "landscape-primary") {
     if (screnSize === innerHeight + innerWidth) {
       camera.position.set(-1.1, 0, 2);
     } else {
-      if (window.innerWidth <= 590) {
+      if (innerWidth <= 590) {
         camera.position.set(0, 0, 2);
-      } else if (window.innerWidth <= 1090) {
+      } else if (innerWidth <= 1090) {
         camera.position.set(-1.1, 0, 2.5);
       } else {
         camera.position.set(-0.7, 0, 2);
@@ -74,7 +71,8 @@ function handleSizeViewport() {
     }
   } else {
     // "portrait-primary"
-    camera.position.set(0, 0, 2);
+    if (screen.availHeight > 1000) camera.position.set(-1, 0, 3);
+    else camera.position.set(0, 0, 2);
   }
 }
 
@@ -101,11 +99,11 @@ function onWindowResize() {
   renderer.setSize(container.clientWidth, container.clientHeight);
 }
 
-window.addEventListener('resize', onWindowResize);
+window.addEventListener("resize", onWindowResize);
 window.onload = function () {
   Particles.init({
-    selector: '.background',
-    color: '#73b34d',
+    selector: ".background",
+    color: "#73b34d",
     maxParticles: 300,
     speed: 1,
   });
