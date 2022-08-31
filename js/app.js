@@ -69,8 +69,15 @@ function handleSizeViewport() {
   } else {
     // "portrait-primary"
 
-    if (screen.height > 1000) camera.position.set(-1, 0, 3);
-    else camera.position.set(0, 0, 2);
+    if (screen.height > 1000) {
+      console.log(`portrait-primary
+      ${screen.height} > 1000`);
+      camera.position.set(-1, 0, 3);
+    } else {
+      console.log(`portrait-primary
+       ${screen.height} < else`);
+      camera.position.set(0, 0, 2);
+    }
   }
 }
 
