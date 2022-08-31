@@ -56,11 +56,9 @@ function handleSizeViewport() {
   //responsive position chameleon
   //change orientation mobile
   let orientation =
-    (screen.orientation || {}).type ||
-    screen.mozOrientation ||
-    screen.msOrientation;
-  console.log(orientation);
-  if (orientation === 'landscape-primary') {
+    screen.msOrientation || screen.orientation || screen.mozOrientation || {};
+  console.log(orientation.type);
+  if (orientation.type === 'landscape-primary') {
     if (screnSize === innerHeight + innerWidth) {
       camera.position.set(-1.1, 0, 2);
     } else {
@@ -72,18 +70,19 @@ function handleSizeViewport() {
         camera.position.set(-0.7, 0, 2);
       }
     }
+    console.log(`landscape-primary
+    ${screen.height} deitado`);
   } else {
     // "portrait-primary"
 
     if (screen.height > 1000) {
-      console.log(`portrait-primary
-      ${screen.height} > 1000`);
       camera.position.set(-1, 0, 3);
     } else {
-      console.log(`portrait-primary
-       ${screen.height} < else`);
       camera.position.set(0, 0, 2);
     }
+
+    console.log(`portrait-primary
+    ${screen.height} em pé`);
   }
 }
 
