@@ -72,6 +72,16 @@ function handleSizeViewport() {
     }
     console.log(`landscape-primary
     ${screen.height} deitado`);
+
+    //ios
+  } else if (orientation.type === undefined) {
+    if (innerWidth <= 590) {
+      camera.position.set(0, 0, 2);
+    } else if (innerWidth <= 1090) {
+      camera.position.set(-1.1, 0, 2.5);
+    } else {
+      camera.position.set(-0.7, 0, 2);
+    }
   } else {
     // "portrait-primary"
 
