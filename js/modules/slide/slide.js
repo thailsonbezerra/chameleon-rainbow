@@ -1,10 +1,10 @@
-import debounce from './debounce.js';
-import { chameleonColorSlide } from './slideColor.js';
+import debounce from "../debounce.js";
+import { chameleonColorSlide } from "./slideColor.js";
 
-const slide = document.querySelector('.slide');
-export const wrapper = document.querySelector('.slide-wrapper');
-export const activeClass = 'active';
-export const changeEvent = new Event('changeEvent');
+const slide = document.querySelector(".slide");
+export const wrapper = document.querySelector(".slide-wrapper");
+export const activeClass = "active";
+export const changeEvent = new Event("changeEvent");
 const dist = {
   startX: 0,
   movement: 0,
@@ -12,18 +12,18 @@ const dist = {
 };
 
 const transition = (active) => {
-  slide.style.transition = active ? 'transform .3s' : '';
+  slide.style.transition = active ? "transform .3s" : "";
 };
 
 const onStart = (event) => {
   let movetype;
-  if (event.type === 'mousedown') {
+  if (event.type === "mousedown") {
     event.preventDefault();
     dist.startX = event.clientX;
-    movetype = 'mousemove';
+    movetype = "mousemove";
   } else {
     dist.startX = event.changedTouches[0].clientX;
-    movetype = 'touchmove';
+    movetype = "touchmove";
   }
 
   wrapper.addEventListener(movetype, onMove);
@@ -32,7 +32,7 @@ const onStart = (event) => {
 };
 
 const onEnd = (event) => {
-  const movetype = event.type === 'mouseup' ? 'mousemove' : 'touchmove';
+  const movetype = event.type === "mouseup" ? "mousemove" : "touchmove";
   wrapper.removeEventListener(movetype, onMove);
   dist.finalPosition = dist.movePosition;
   changeSlideOnEnd();
@@ -51,7 +51,7 @@ const changeSlideOnEnd = () => {
 
 const onMove = (event) => {
   const pointPosition =
-    event.type === 'mousemove'
+    event.type === "mousemove"
       ? event.clientX
       : event.changedTouches[0].clientX;
   const finalPosition = updatePosition(pointPosition);
@@ -108,8 +108,9 @@ export const changeSlide = (index) => {
   slidesIndexNav(index);
   dist.finalPosition = activeSlide.position;
   changeActiveClass();
-  wrapper.dispatchEvent(changeEvent);
   chameleonColorSlide();
+
+  wrapper.dispatchEvent(changeEvent);
 };
 
 const changeActiveClass = () => {
@@ -118,10 +119,10 @@ const changeActiveClass = () => {
 };
 
 const addSlideEvents = () => {
-  wrapper.addEventListener('mouseup', onEnd);
-  wrapper.addEventListener('touchend', onEnd);
-  wrapper.addEventListener('mousedown', onStart);
-  wrapper.addEventListener('touchstart', onStart);
+  wrapper.addEventListener("mouseup", onEnd);
+  wrapper.addEventListener("touchend", onEnd);
+  wrapper.addEventListener("mousedown", onStart);
+  wrapper.addEventListener("touchstart", onStart);
 };
 addSlideEvents();
 
@@ -135,7 +136,7 @@ const onResize = () => {
 const debouncedResize = debounce(onResize, 200);
 
 const addResizeEvent = () => {
-  window.addEventListener('resize', debouncedResize);
+  window.addEventListener("resize", debouncedResize);
 };
 
 export const init = () => {
