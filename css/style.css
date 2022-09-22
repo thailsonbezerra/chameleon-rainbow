@@ -4,9 +4,9 @@
 @import "header.css";
 
 /* SLIDES */
-@import "/css/slide/slide.css";
-@import "/css/slide/slideNav.css";
-@import "/css/slide/slidePreview.css";
+@import "slide/slide.css";
+@import "slide/slideNav.css";
+@import "slide/slidePreview.css";
 /* ANIMAÇÕES */
 @import "animacoes/colorChange.css";
 @import "animacoes/hamburgers.css";
