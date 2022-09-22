@@ -1,3 +1,7 @@
+body {
+  overflow: hidden;
+}
+
 .slide-wrapper {
   overflow: hidden;
   position: relative;

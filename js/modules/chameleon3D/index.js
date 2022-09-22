@@ -1,3 +1,5 @@
+import("../menu.js");
+
 let container;
 let camera;
 let render;
@@ -68,7 +70,7 @@ function handleSizeViewport() {
       } else if (innerWidth <= 1090) {
         camera.position.set(-1.1, 0, 2.5);
       } else {
-        camera.position.set(-0.7, 0, 2);
+        camera.position.set(-0.85, 0, 2);
       }
     }
   }
@@ -134,5 +136,6 @@ window.onload = function () {
     ],
   });
   handleSizeViewport();
+  menu();
 };
 init();

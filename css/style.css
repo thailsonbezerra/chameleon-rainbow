@@ -1,6 +1,12 @@
 @import "global.css";
-@import "slide.css";
-@import "slideNav.css";
-@import "slidePreview.css";
-@import "3d.css";
+
+@import "home.css";
 @import "header.css";
+
+/* SLIDES */
+@import "/css/slide/slide.css";
+@import "/css/slide/slideNav.css";
+@import "/css/slide/slidePreview.css";
+/* ANIMAÇÕES */
+@import "animacoes/colorChange.css";
+@import "animacoes/hamburgers.css";

@@ -126,7 +126,7 @@ const addSlideEvents = () => {
 };
 addSlideEvents();
 
-const onResize = () => {
+export const onResize = () => {
   setTimeout(() => {
     slideArray = slidesConfig();
     changeSlide(indexObj.active);

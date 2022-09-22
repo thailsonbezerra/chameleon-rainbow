@@ -1,4 +1,3 @@
-import { colorSlide } from "../headerResize.js";
 import { arrowColorChange } from "./slideNav.js";
 
 export const colors = {
@@ -22,9 +21,6 @@ export const chameleonColorSlide = () => {
       const chameleonColor = chameleonImg
         .replace("img/bgblack/", "")
         .replace(".png", "");
-
-      colorSlide(colors[chameleonColor]);
-      arrowColorChange(colors[chameleonColor]);
     }
   });
 };

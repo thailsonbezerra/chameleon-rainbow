@@ -1,0 +1,51 @@
+.color-change-7x {
+  -webkit-animation: color-change-7x 8s linear infinite alternate both;
+  animation: color-change-7x 8s linear infinite alternate both;
+}
+
+@-webkit-keyframes color-change-7x {
+  0% {
+    background: #ff0000;
+  }
+  15% {
+    background: #ff7f00;
+  }
+  30% {
+    background: #ffff00;
+  }
+  45% {
+    background: #00ff00;
+  }
+  60% {
+    background: #00ffff;
+  }
+  75% {
+    background: #0000ff;
+  }
+  100% {
+    background: #8b00ff;
+  }
+}
+@keyframes color-change-7x {
+  0% {
+    background: #ff0000;
+  }
+  15% {
+    background: #ff7f00;
+  }
+  30% {
+    background: #ffff00;
+  }
+  45% {
+    background: #00ff00;
+  }
+  60% {
+    background: #00ffff;
+  }
+  75% {
+    background: #0000ff;
+  }
+  100% {
+    background: #8b00ff;
+  }
+}
