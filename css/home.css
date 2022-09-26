@@ -5,16 +5,10 @@
   src: url(../fonts/Bazar.ttf);
 }
 
-body.home {
+body#home {
   overflow: hidden;
   background: #1a250f url("../img/leafdesenho.png") no-repeat;
   background-size: cover;
-}
-
-.container-bg {
-  font-family: sans-serif;
-  /*   background: #1a250f url("../img/leafdesenho.png") no-repeat;
-  background-size: cover; */
 }
 
 .container {
@@ -28,19 +22,19 @@ body.home {
   height: 100vh;
 }
 
-.title {
+.home .title {
   padding: 20px 0;
   z-index: 2;
   text-align: center;
 }
 
-h1 {
+.home h1 {
   font-family: Bazar;
   font-size: 10em;
   color: #73b34d;
 }
 
-h2 {
+.home h2 {
   font-family: Bazar;
   font-size: 7em;
   color: #73b34d;
@@ -48,11 +42,11 @@ h2 {
   padding: 20px;
 }
 
-h2 span {
+.home h2 span {
   opacity: 0.7;
 }
 
-h2 span:hover {
+.home h2 span:hover {
   opacity: 1;
 }
 
@@ -70,41 +64,41 @@ canvas {
 }
 
 @media (max-width: 1297px) {
-  h1 {
+  .home h1 {
     font-size: 8em;
   }
 
-  h2 {
+  .home h2 {
     font-size: 5.5em;
   }
 }
 
 @media (max-width: 940px) {
-  h1 {
+  .home h1 {
     font-size: 6em;
   }
 
-  h2 {
+  .home h2 {
     font-size: 4em;
   }
 }
 
 @media (max-width: 800px) {
-  h1 {
+  .home h1 {
     font-size: 5.5em;
   }
 
-  h2 {
+  .home h2 {
     font-size: 3.5em;
   }
 }
 
 @media (max-width: 700px) {
-  h1 {
+  .home h1 {
     font-size: 5em;
   }
 
-  h2 {
+  .home h2 {
     font-size: 3em;
   }
 }
@@ -118,21 +112,21 @@ canvas {
     padding: 40px 0;
   }
 
-  h1 {
+  .home h1 {
     font-size: 4em;
   }
 
-  h2 {
+  .home h2 {
     font-size: 2em;
   }
 }
 
 @media (max-width: 300px) {
-  h1 {
+  .home h1 {
     font-size: 3em;
   }
 
-  h2 {
+  .home h2 {
     font-size: 1.5em;
   }
 }

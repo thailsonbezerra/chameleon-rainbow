@@ -5,13 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Chameleon Rainbow</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@600&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./css/style.css" />
   </head>
-  <body class="home">
-    <!--    <div class="teste slide-in-blurred-tr">
-      <nav></nav>
-    </div> -->
-
+  <body id="home">
     <header>
       <a href="">
         <img src="img/chameleonIcon.png" alt="chameleon rainbow icon" />
@@ -26,7 +28,7 @@
       </button>
     </header>
 
-    <div class="container-bg">
+    <div class="home">
       <div class="container">
         <div class="title">
           <h1>CHAMELEON</h1>
@@ -44,9 +46,38 @@
       <canvas class="background"></canvas>
     </div>
 
+    <div class="menu-bg color-change-7x">
+      <div class="menu">
+        <h1 class="option-bg">Menu</h1>
+        <div class="info">
+          <img src="img/chameleonIconResize.png" alt="" />
+          <span>inicio</span>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corrupti
+            quidem assumenda cum quasi dicta magnam odit dolorem repellat
+            debitis cumque culpa, dolorum delectus quia eveniet fugit id
+            nostrum, quod laborum?
+          </p>
+          <button>veja o inicio</button>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="">inicio.</a></li>
+            <li><a href="">slide color.</a></li>
+            <li><a href="">sobre.</a></li>
+            <li><a href="">jogo da memoria.</a></li>
+          </ul>
+        </nav>
+        <div class="contato">
+          <a href=""><img src="./img/icons/github.png" alt="" /></a>
+          <a href=""><img src="./img/icons/instagram.png" alt="" /></a>
+          <a href=""><img src="./img/icons/linkedin.png" alt="" /></a>
+        </div>
+      </div>
+    </div>
+
     <script src="./js/modules/chameleon3D/three.min.js"></script>
-    <script src="./js/modules/chameleon3D/GLTFLoader.js"></script>
     <script src="./js/modules/particles.min.js"></script>
-    <script src="./js/modules/chameleon3D/index.js"></script>
+    <script type="module" src="./js/modules/chameleon3D/index.js"></script>
   </body>
 </html>

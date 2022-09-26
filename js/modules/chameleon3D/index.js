@@ -1,10 +1,16 @@
-import("../menu.js");
+import { menu } from "../menu.js";
+import "./GLTFLoader.js";
 
 let container;
 let camera;
 let render;
 let scene;
 let chameleon;
+
+let renderer = new THREE.WebGLRenderer({
+  antialias: true,
+  alpha: true,
+});
 
 function init() {
   container = document.querySelector(".container");
@@ -27,10 +33,6 @@ function init() {
   light.position.set(10, 10, 100);
   scene.add(light);
   //Renderer
-  renderer = new THREE.WebGLRenderer({
-    antialias: true,
-    alpha: true,
-  });
 
   renderer.setSize(container.clientWidth, container.clientHeight);
   renderer.setPixelRatio(window.devicePixelRatio);

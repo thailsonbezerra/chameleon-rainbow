@@ -1,0 +1,85 @@
+@import "hamburguer.css";
+.menu-bg {
+  height: 100vh;
+}
+
+.menu {
+  padding: 20px;
+  height: 92vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-content: center;
+  align-items: center;
+}
+
+.option-bg {
+  position: absolute;
+  font-size: 20rem;
+  letter-spacing: 24px;
+  white-space: nowrap;
+  margin: 0;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  opacity: 0.1;
+}
+
+.info {
+  align-self: flex-end;
+}
+.info h2 {
+  font-size: 1.3rem;
+  padding-bottom: 8px;
+}
+
+.info img {
+  width: 150px;
+}
+
+.info p {
+  padding-bottom: 4px;
+}
+
+.info button {
+  background-color: #000;
+  color: white;
+  padding: 8px 12px;
+}
+
+.info button:hover {
+  background-color: white;
+  color: #000;
+}
+
+nav {
+  z-index: 2;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  white-space: nowrap;
+}
+
+nav a {
+  font-family: "Raleway", sans-serif;
+  font-size: 4rem;
+  text-align: justify;
+  color: #000;
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: white;
+}
+
+.contato {
+  display: flex;
+
+  align-self: flex-end;
+  gap: 20px;
+  justify-self: right;
+}
