@@ -15,7 +15,7 @@
 
 .option-bg {
   position: absolute;
-  font-size: 20rem;
+  font-size: 24rem;
   letter-spacing: 24px;
   white-space: nowrap;
   margin: 0;
@@ -29,26 +29,33 @@
 .info {
   align-self: flex-end;
 }
-.info h2 {
-  font-size: 1.3rem;
-  padding-bottom: 8px;
-}
 
 .info img {
   width: 150px;
 }
 
-.info p {
-  padding-bottom: 4px;
+.info .info-options {
+  display: none;
+  font-family: 'Raleway';
 }
 
-.info button {
+.info .info-options span {
+  font-size: 2.2rem;
+}
+
+.info .info-options p {
+  margin-bottom: 8px;
+}
+
+.info .info-options button {
   background-color: #000;
   color: white;
   padding: 8px 12px;
+  text-transform: uppercase;
+  font-family: inherit;
 }
 
-.info button:hover {
+.info .info-options button:hover {
   background-color: white;
   color: #000;
 }
@@ -67,7 +74,7 @@ nav ul {
 
 nav a {
   font-family: 'Raleway', sans-serif;
-  font-size: 4rem;
+  font-size: 5rem;
   text-align: justify;
   color: #000;
   text-decoration: none;

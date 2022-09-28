@@ -3,7 +3,7 @@ export const menu = () => {
   const menu = document.querySelector('.menu-bg');
   const home = document.querySelector('.home');
   const slide = document.querySelector('.slide-wrapper');
-  const hamburguerInner = document.querySelector('.hamburger-inner');
+  const options = [...document.querySelectorAll('.menu > nav > ul > li')];
 
   const pagsArray = [home, slide];
   const handleClickMenu = () => {
@@ -30,5 +30,27 @@ export const menu = () => {
     }
   };
 
+  const optionBg = document.querySelector('.option-bg');
+  const infoOptions = document.querySelector('.info-options');
+
+  const handleHoverOptions = (event) => {
+    const optionValue = event.target.innerText;
+    const optionText = optionValue.split(' ');
+    optionBg.innerText = optionText[0].replace('.', '');
+    console.log(event);
+    infoOptions.style.display = 'block';
+  };
+
+  const handleClickOptions = (event) => {
+    event.preventDefault();
+  };
+
   hamburger.addEventListener('click', handleClickMenu);
+  options.map((option) =>
+    option.addEventListener('mouseover', handleHoverOptions),
+  );
+  options.map((option) => option.addEventListener('click', handleClickOptions));
+  optionBg.addEventListener('mouseover', () => {
+    optionBg.innerText = '';
+  });
 };
