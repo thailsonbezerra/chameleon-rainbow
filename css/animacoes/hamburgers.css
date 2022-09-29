@@ -9,7 +9,7 @@
   transition-timing-function: linear;
   text-transform: none;
   overflow: visible;
-  background-color: #73b34d;
+  background: inherit;
 }
 .hamburger:hover {
   opacity: 0.7;

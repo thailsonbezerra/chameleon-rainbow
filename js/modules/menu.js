@@ -1,30 +1,33 @@
-export const menu = () => {
+export const menu = (Particles) => {
   const hamburger = document.querySelector('.hamburger');
   const menu = document.querySelector('.menu-bg');
   const home = document.querySelector('.home');
   const slide = document.querySelector('.slide-wrapper');
   const options = [...document.querySelectorAll('.menu > nav > ul > li')];
+  const header = document.querySelector('header');
 
   const pagsArray = [home, slide];
   const handleClickMenu = () => {
+    header.style.background = 'rgba(0, 0, 0, 0.375)';
     hamburger.classList.toggle('is-active');
     hamburger.classList.toggle('color-change-7x');
-    hamburger.style.background = '#000';
 
     if (hamburger.classList.contains('is-active')) {
+      header.style.backgroundColor = '#000';
       menu.style.display = 'block';
       menu.classList.add('slide-in-blurred-tr');
       pagsArray.map((el) => {
         if (el) {
+          Particles && Particles.pauseAnimation();
           el.style.display = 'none';
         }
       });
     } else {
       menu.style.display = 'none';
-      menu.classList.remove('slide-in-blurred-tr');
       pagsArray.map((el) => {
         if (el) {
           el.style.display = 'block';
+          Particles && Particles.resumeAnimation();
         }
       });
     }
@@ -49,15 +52,11 @@ export const menu = () => {
     });
   };
 
-  const handleClickOptions = (event) => {
-    event.preventDefault();
-  };
-
   hamburger.addEventListener('click', handleClickMenu);
   options.map((option) =>
     option.addEventListener('mouseover', handleHoverOptions),
   );
-  options.map((option) => option.addEventListener('click', handleClickOptions));
+
   optionBg.addEventListener('mouseover', () => {
     optionBg.innerText = '';
     infoOptions.map((el) => (el.style.display = 'none'));

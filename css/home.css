@@ -1,4 +1,4 @@
-@import "colorSubtitle.css";
+@import 'colorSubtitle.css';
 
 @font-face {
   font-family: Bazar;
@@ -7,7 +7,7 @@
 
 body#home {
   overflow: hidden;
-  background: #1a250f url("../img/leafdesenho.png") no-repeat;
+  background: #000 url('../img/leafdesenho.png') no-repeat;
   background-size: cover;
 }
 

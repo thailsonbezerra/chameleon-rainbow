@@ -3,6 +3,11 @@
   animation: color-change-7x 8s linear infinite alternate both;
 }
 
+.colorFont-change-7x {
+  -webkit-animation: colorFont-change-7x 8s linear infinite alternate both;
+  animation: colorFont-change-7x 8s linear infinite alternate both;
+}
+
 @-webkit-keyframes color-change-7x {
   0% {
     background: #ff0000;
@@ -47,5 +52,52 @@
   }
   100% {
     background: #8b00ff;
+  }
+}
+
+@-webkit-keyframes colorFont-change-7x {
+  0% {
+    color: #ff0000;
+  }
+  15% {
+    color: #ff7f00;
+  }
+  30% {
+    color: #ffff00;
+  }
+  45% {
+    color: #00ff00;
+  }
+  60% {
+    color: #00ffff;
+  }
+  75% {
+    color: #0000ff;
+  }
+  100% {
+    color: #8b00ff;
+  }
+}
+@keyframes colorFont-change-7x {
+  0% {
+    color: #ff0000;
+  }
+  15% {
+    color: #ff7f00;
+  }
+  30% {
+    color: #ffff00;
+  }
+  45% {
+    color: #00ff00;
+  }
+  60% {
+    color: #00ffff;
+  }
+  75% {
+    color: #0000ff;
+  }
+  100% {
+    color: #8b00ff;
   }
 }
