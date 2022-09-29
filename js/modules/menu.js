@@ -31,14 +31,22 @@ export const menu = () => {
   };
 
   const optionBg = document.querySelector('.option-bg');
-  const infoOptions = document.querySelector('.info-options');
+  const infoOptions = [...document.querySelectorAll('.info-options')];
 
   const handleHoverOptions = (event) => {
     const optionValue = event.target.innerText;
     const optionText = optionValue.split(' ');
     optionBg.innerText = optionText[0].replace('.', '');
-    console.log(event);
-    infoOptions.style.display = 'block';
+
+    const optionAtual = event.currentTarget;
+    const optionAtualIndex = options.indexOf(optionAtual);
+
+    infoOptions.map((el, index) => {
+      el.style.display = 'none';
+      if (index === optionAtualIndex) {
+        el.style.display = 'block';
+      }
+    });
   };
 
   const handleClickOptions = (event) => {
@@ -52,5 +60,6 @@ export const menu = () => {
   options.map((option) => option.addEventListener('click', handleClickOptions));
   optionBg.addEventListener('mouseover', () => {
     optionBg.innerText = '';
+    infoOptions.map((el) => (el.style.display = 'none'));
   });
 };
