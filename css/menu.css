@@ -1,4 +1,4 @@
-@import 'hamburguer.css';
+@import "hamburguer.css";
 .menu-bg {
   display: none;
   height: 100vh;
@@ -8,12 +8,14 @@
   padding: 20px;
   height: 92vh;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 2fr 1fr;
   justify-content: center;
   align-items: center;
+  gap: 20px;
 }
 
 .option-bg {
+  padding: 20px;
   position: absolute;
   font-size: 24rem;
   letter-spacing: 24px;
@@ -30,34 +32,13 @@
   align-self: flex-end;
 }
 
-.info img {
-  width: 150px;
-}
-
 .info .info-options {
   display: none;
-  font-family: 'Raleway';
+  font-family: "Raleway";
 }
 
 .info .info-options span {
   font-size: 2.2rem;
-}
-
-.info .info-options p {
-  margin-bottom: 8px;
-}
-
-.info .info-options button {
-  background-color: #000;
-  color: white;
-  padding: 8px 12px;
-  text-transform: uppercase;
-  font-family: inherit;
-}
-
-.info .info-options button:hover {
-  background-color: white;
-  color: #000;
 }
 
 nav {
@@ -73,7 +54,7 @@ nav ul {
 }
 
 nav a {
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
   font-size: 5rem;
   text-align: justify;
   color: #000;
