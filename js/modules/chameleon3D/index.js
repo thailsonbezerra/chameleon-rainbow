@@ -71,7 +71,7 @@ function handleSizeViewport() {
         camera.position.set(0, 0, 2);
       }
     } else {
-      if (innerWidth <= 590) {
+      if (innerWidth <= 560) {
         camera.position.set(0, 0, 2);
       } else if (innerWidth <= 1090) {
         camera.position.set(-1.4, 0, 2.5);
