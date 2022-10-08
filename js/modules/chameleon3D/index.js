@@ -62,39 +62,41 @@ function handleSizeViewport() {
   //responsive position chameleon
   //change orientation mobile
   let orientation = screen.orientation || {};
-  console.log(orientation.type);
-  //ANDROIDS E WEB (PAISAGEM/HORIZONTAL)
-  if (orientation.type === "landscape-primary") {
-    if (screnSize === innerHeight + innerWidth) {
-      camera.position.set(-1.1, 0, 2);
+
+  if (orientation.type === undefined) {
+    if (innerHeight > innerWidth) {
+      if (innerHeight > 1000) {
+        camera.position.set(-1, 0, 3);
+      } else {
+        camera.position.set(0, 0, 2);
+      }
     } else {
       if (innerWidth <= 590) {
         camera.position.set(0, 0, 2);
       } else if (innerWidth <= 1090) {
         camera.position.set(-1.4, 0, 2.5);
       } else {
-        camera.position.set(-0.85, 0, 2);
+        camera.position.set(-1, 0, 2);
       }
     }
   }
-  //ANDROIDS (RETO/VERTICAL)
-  else if (orientation.type === "portrait-primary") {
-    if (screen.height > 1000) {
-      camera.position.set(-1, 0, 3);
-    } else {
-      camera.position.set(0, 0, 2);
-    }
-  }
-  //IOS
-  else {
-    if (innerHeight > 1000) {
-      camera.position.set(-1, 0, 3);
-    } else if (innerWidth <= 590) {
+
+  // (PAISAGEM/HORIZONTAL)
+  else if (orientation.type === "landscape-primary") {
+    if (innerWidth <= 590) {
       camera.position.set(0, 0, 2);
     } else if (innerWidth <= 1090) {
-      camera.position.set(-1.3, 0, 2.5);
+      camera.position.set(-1.4, 0, 2.5);
     } else {
-      camera.position.set(-0.7, 0, 2);
+      camera.position.set(-1, 0, 2);
+    }
+  }
+  // (RETO/VERTICAL)
+  else if (orientation.type === "portrait-primary") {
+    if (innerHeight > 1000) {
+      camera.position.set(-1, 0, 3);
+    } else {
+      camera.position.set(0, 0, 2);
     }
   }
 }
