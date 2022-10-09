@@ -54,11 +54,9 @@ function animate() {
   chameleon.rotation.z += 0.005;
   renderer.render(scene, camera);
 }
-const screnSize = screen.width + screen.height;
-console.log(screnSize);
+
 function handleSizeViewport() {
   camera.fov = responsiveFovChameleon();
-
   //responsive position chameleon
   //change orientation mobile
   let orientation = screen.orientation || {};
@@ -71,10 +69,10 @@ function handleSizeViewport() {
         camera.position.set(0, 0, 2);
       }
     } else {
-      if (innerWidth <= 560) {
+      if (innerWidth <= 590) {
         camera.position.set(0, 0, 2);
       } else if (innerWidth <= 1090) {
-        camera.position.set(-1.4, 0, 2.5);
+        camera.position.set(-1.4, 0, 2);
       } else {
         camera.position.set(-1, 0, 2);
       }
@@ -86,7 +84,7 @@ function handleSizeViewport() {
     if (innerWidth <= 590) {
       camera.position.set(0, 0, 2);
     } else if (innerWidth <= 1090) {
-      camera.position.set(-1.4, 0, 2.5);
+      camera.position.set(-1.4, 0, 2);
     } else {
       camera.position.set(-1, 0, 2);
     }
