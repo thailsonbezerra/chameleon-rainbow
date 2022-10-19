@@ -2,6 +2,7 @@ export const menu = (Particles) => {
   const hamburger = document.querySelector(".hamburger");
   const menu = document.querySelector(".menu-bg");
   const home = document.querySelector(".home");
+  const sobre = document.querySelector(".sobre");
   const slide = document.querySelector(".slide-wrapper");
   const options = [...document.querySelectorAll(".menu > nav > ul > li")];
   const header = document.querySelector("header");
@@ -9,7 +10,7 @@ export const menu = (Particles) => {
     ...document.querySelectorAll(".menu > .contato >  a > img"),
   ];
 
-  const pagsArray = [home, slide];
+  const pagsArray = [home, slide, sobre];
   const handleClickMenu = () => {
     header.style.background = "rgba(0, 0, 0, 0.375)";
     hamburger.classList.toggle("is-active");

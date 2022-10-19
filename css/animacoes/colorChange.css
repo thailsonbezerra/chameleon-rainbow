@@ -10,48 +10,48 @@
 
 @-webkit-keyframes color-change-7x {
   0% {
-    background: #ff0000;
+    background: #e1251b;
   }
   15% {
-    background: #ff7f00;
+    background: #ff6000;
   }
   30% {
-    background: #ffff00;
+    background: #fffc7f;
   }
   45% {
-    background: #00ff00;
+    background: #03a678;
   }
   60% {
-    background: #00ffff;
+    background: #007aff;
   }
   75% {
-    background: #0000ff;
+    background: #111e90;
   }
   100% {
-    background: #8b00ff;
+    background: #2b0062;
   }
 }
 @keyframes color-change-7x {
   0% {
-    background: #ff0000;
+    background: #e1251b;
   }
   15% {
-    background: #ff7f00;
+    background: #ff6000;
   }
   30% {
-    background: #ffff00;
+    background: #fffc7f;
   }
   45% {
-    background: #00ff00;
+    background: #03a678;
   }
   60% {
-    background: #00ffff;
+    background: #007aff;
   }
   75% {
-    background: #0000ff;
+    background: #111e90;
   }
   100% {
-    background: #8b00ff;
+    background: #2b0062;
   }
 }
 

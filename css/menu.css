@@ -1,4 +1,4 @@
-@import "hamburguer.css";
+@import "animacoes/hamburgers.css";
 .menu-bg {
   display: none;
   height: 100vh;
@@ -35,10 +35,6 @@
 .info .info-options {
   display: none;
   font-family: "Raleway";
-}
-
-.info .info-options:nth-child(4) {
-  display: block !important;
 }
 
 .info .info-options span {

@@ -2,6 +2,7 @@
 
 @import "home.css";
 @import "header.css";
+@import "sobre.css";
 @import "menu.css";
 
 /* SLIDES */
@@ -9,5 +10,6 @@
 @import "slide/slideNav.css";
 @import "slide/slidePreview.css";
 /* ANIMAÇÕES */
-@import "animacoes/colorChange.css";
-@import "animacoes/hamburgers.css";
+
+@import "../css/animacoes/colorChange.css";
+@import "../css/animacoes/hamburgers.css";

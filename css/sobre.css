@@ -1,0 +1,17 @@
+@font-face {
+  font-family: Bazar;
+  src: url(../fonts/Bazar.ttf);
+}
+
+.red {
+  height: 100vh;
+  background-color: #e1251b;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 60px 0;
+  gap: 20px;
+}
+
+.energiatitle {
+  color: white;
+}

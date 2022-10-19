@@ -74,11 +74,14 @@ const slidePosition = (slide) => {
 };
 
 const slidesConfig = () => {
-  return [...slide.children].map((element) => {
-    const position = slidePosition(element);
-    return { position, element };
-  });
+  if (slide !== null) {
+    return [...slide.children].map((element) => {
+      const position = slidePosition(element);
+      return { position, element };
+    });
+  }
 };
+
 export let slideArray = slidesConfig();
 
 export const indexObj = {
@@ -103,14 +106,17 @@ export const activeNextSlide = () => {
 };
 
 export const changeSlide = (index) => {
-  const activeSlide = slideArray[index];
-  moveSlide(activeSlide.position);
-  slidesIndexNav(index);
-  dist.finalPosition = activeSlide.position;
-  changeActiveClass();
-  chameleonColorSlide();
+  if (slide !== null) {
+    const activeSlide = slideArray[index];
+    4;
+    moveSlide(activeSlide.position);
+    slidesIndexNav(index);
+    dist.finalPosition = activeSlide.position;
+    changeActiveClass();
+    chameleonColorSlide();
 
-  wrapper.dispatchEvent(changeEvent);
+    wrapper.dispatchEvent(changeEvent);
+  }
 };
 
 const changeActiveClass = () => {
@@ -119,10 +125,12 @@ const changeActiveClass = () => {
 };
 
 const addSlideEvents = () => {
-  wrapper.addEventListener("mouseup", onEnd);
-  wrapper.addEventListener("touchend", onEnd);
-  wrapper.addEventListener("mousedown", onStart);
-  wrapper.addEventListener("touchstart", onStart);
+  if (wrapper !== null) {
+    wrapper.addEventListener("mouseup", onEnd);
+    wrapper.addEventListener("touchend", onEnd);
+    wrapper.addEventListener("mousedown", onStart);
+    wrapper.addEventListener("touchstart", onStart);
+  }
 };
 addSlideEvents();
 
@@ -140,8 +148,10 @@ const addResizeEvent = () => {
 };
 
 export const init = () => {
-  changeSlide(3);
-  addSlideEvents();
-  slidesConfig();
-  addResizeEvent();
+  if (slide !== null) {
+    changeSlide(3);
+    addSlideEvents();
+    slidesConfig();
+    addResizeEvent();
+  }
 };

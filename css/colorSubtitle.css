@@ -1,22 +1,31 @@
 .R {
   color: #ff0000;
+  /* #E1251B */
 }
 
 .A {
   color: #ff7f00;
+  /* #ff6000 */
 }
 .I {
   color: #ffff00;
+  /* #fffc7f */
 }
 .N {
   color: #00ff00;
+  /* #03a678 */
 }
 .B {
   color: #00ffff;
+  /* #007aff */
 }
 .O {
   color: #0000ff;
+  /* #111e90 */
 }
 .W {
   color: #8b00ff;
+  /* #2a0d3d */
+  /* #180c20 
+  #2B0062*/
 }
