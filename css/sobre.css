@@ -3,15 +3,44 @@
   src: url(../fonts/Bazar.ttf);
 }
 
-.red {
-  height: 100vh;
-  background-color: #e1251b;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  padding: 60px 0;
-  gap: 20px;
+#sobre {
+  overflow: auto;
 }
 
-.energiatitle {
-  color: white;
+#sobre header {
+  position: fixed;
+  border: none;
+  background: transparent;
+}
+
+section {
+  height: 100vh;
+}
+
+.red {
+  background: #e1251b;
+}
+
+.orange {
+  background: #ff6000;
+}
+
+.yellow {
+  background: #fffc7f;
+}
+
+.green {
+  background: #03a678;
+}
+
+.blue {
+  background: #007aff;
+}
+
+.indigo {
+  background: #111e90;
+}
+
+.violat {
+  background: #2a0d3d;
 }

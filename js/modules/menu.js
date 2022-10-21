@@ -1,4 +1,5 @@
 export const menu = (Particles) => {
+  const body = document.querySelector("body");
   const hamburger = document.querySelector(".hamburger");
   const menu = document.querySelector(".menu-bg");
   const home = document.querySelector(".home");
@@ -12,7 +13,16 @@ export const menu = (Particles) => {
 
   const pagsArray = [home, slide, sobre];
   const handleClickMenu = () => {
-    header.style.background = "rgba(0, 0, 0, 0.375)";
+    const [pageAtual] = pagsArray.filter((el) => el !== null);
+    const isHome = pageAtual.classList.value === "sobre";
+
+    if (isHome) {
+      header.style.position = "initial";
+      body.style.overflow = "hidden";
+      window.scrollTo(0, 0);
+      hamburger.classList.toggle("color-change-7x");
+    } else header.style.background = "rgba(0, 0, 0, 0.375)";
+
     hamburger.classList.toggle("is-active");
     hamburger.classList.toggle("color-change-7x");
 
@@ -27,6 +37,11 @@ export const menu = (Particles) => {
         }
       });
     } else {
+      if (isHome) {
+        header.style.position = "fixed";
+        header.style.background = "transparent";
+        body.style.overflow = "auto";
+      }
       menu.style.display = "none";
       pagsArray.map((el) => {
         if (el) {
