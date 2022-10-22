@@ -40,7 +40,7 @@ section {
 }
 
 .red .red-info p {
-  font-size: 1.3rem;
+  font-size: 1.4rem;
 }
 
 .red .red-info .red-destaque {
@@ -87,4 +87,73 @@ section {
 
 .violat {
   background: #2a0d3d;
+}
+
+@media (max-width: 1150px) {
+  .red .red-info,
+  .red .red-associacao {
+    align-self: center;
+    padding: 40px;
+  }
+
+  .red .red-info h3 {
+    margin-bottom: 24px;
+    font-size: 3.5rem;
+  }
+
+  .red .red-info p {
+    font-size: 1.2rem;
+  }
+
+  .red .red-associacao p {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 965px) {
+  .red .red-info,
+  .red .red-associacao {
+    align-self: center;
+    padding: 20px;
+  }
+  .red .red-info h3 {
+    margin-bottom: 24px;
+    font-size: 2.5rem;
+  }
+
+  .red .red-info p {
+    font-size: 1rem;
+  }
+
+  .red .red-associacao p {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 685px) {
+  .red {
+    background-image: linear-gradient(to right, #e1251b 50%, #fafafa 50%);
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 2fr 1fr;
+  }
+
+  .red .red-info {
+    text-align: center;
+  }
+
+  .red .red-info p {
+    font-size: 1.3rem;
+  }
+
+  .red .red-associacao p {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .red .red-destaque {
+    color: black !important;
+    font-weight: bold;
+  }
 }
