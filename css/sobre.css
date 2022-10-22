@@ -11,6 +11,7 @@
   position: fixed;
   border: none;
   background: transparent;
+  width: 100%;
 }
 
 section {
@@ -144,6 +145,10 @@ section {
 
   .red .red-info p {
     font-size: 1.3rem;
+  }
+
+  .red .red-associacao {
+    background-position: bottom right;
   }
 
   .red .red-associacao p {
