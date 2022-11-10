@@ -1,23 +1,3 @@
-@font-face {
-  font-family: Bazar;
-  src: url(../fonts/Bazar.ttf);
-}
-
-#sobre {
-  overflow: auto;
-}
-
-#sobre header {
-  position: fixed;
-  border: none;
-  background: transparent;
-  width: 100%;
-}
-
-section {
-  height: 100vh;
-}
-
 .red {
   background-image: linear-gradient(to right, #e1251b 50%, #fafafa 50%);
   display: grid;
@@ -64,30 +44,6 @@ section {
 
 .red .red-associacao .red-destaque {
   color: red;
-}
-
-.orange {
-  background: #ff6000;
-}
-
-.yellow {
-  background: #fffc7f;
-}
-
-.green {
-  background: #03a678;
-}
-
-.blue {
-  background: #007aff;
-}
-
-.indigo {
-  background: #111e90;
-}
-
-.violat {
-  background: #2a0d3d;
 }
 
 @media (max-width: 1150px) {
