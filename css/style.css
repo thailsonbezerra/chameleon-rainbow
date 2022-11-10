@@ -2,14 +2,18 @@
 
 @import "home.css";
 @import "header.css";
-@import "sobre.css";
 @import "menu.css";
 
 /* SLIDES */
 @import "slide/slide.css";
 @import "slide/slideNav.css";
 @import "slide/slidePreview.css";
-/* ANIMAÇÕES */
 
+/* SOBRE */
+@import "sobre/sobre.css";
+@import "sobre/redSobre.css";
+@import "sobre/orangeSobre.css";
+
+/* ANIMAÇÕES */
 @import "../css/animacoes/colorChange.css";
 @import "../css/animacoes/hamburgers.css";
