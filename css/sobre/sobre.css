@@ -27,7 +27,7 @@ section {
 }
 
 .green {
-  background: #03a678;
+  background-color: #03a678 !important;
 }
 
 .blue {
