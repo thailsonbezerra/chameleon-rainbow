@@ -26,12 +26,12 @@ section {
   background-color: #fffc7f;
 }
 
-.green {
+.green-bg {
   background-color: #03a678 !important;
 }
 
 .blue {
-  background: #007aff;
+  background-color: #007aff !important;
 }
 
 .indigo {

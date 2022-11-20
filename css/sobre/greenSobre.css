@@ -1,89 +1,47 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Poppins:wght@400;700&display=swap");
-.green {
-  background: url("../../img/sobre/green/greenbg.png") #03a678 no-repeat bottom
-    left;
+.green-bg {
+  background: url("../../img/sobre/green/verde-bg.svg") center no-repeat;
   background-size: cover;
 }
-
-.green .green-info {
-  position: relative;
+.green {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: start;
+  align-items: flex-end;
   flex-direction: column;
-  padding: 20px;
-  gap: 30px;
+  background: url("../../img/sobre/green/verde.png") left bottom no-repeat;
+  background-size: contain;
+  height: 100%;
+}
+.green .green-info {
+  padding: 12px;
+  text-align: end;
 }
 
-.green h1 {
+.green .green-info h1 {
+  font-size: 10rem;
   color: #fff;
-  font-size: 8em;
-  font-size: bold;
-  font-family: "Poppins", sans-serif;
+  margin-bottom: 64px;
 }
 
-.green h1 span {
-  color: #56b846;
+.green .green-info p {
+  font-size: 3.5rem;
+  width: 20ch;
 }
 
-.green .modal {
-  position: relative;
-  background-color: #fff;
-  border: 3px #000 solid;
-  width: 60ch;
-  padding: 24px;
-  border-radius: 5px;
-}
-
-.green .modal p {
-  font-size: 1.5rem;
-  font-family: "Poppins", sans-serif;
-  text-align: center;
-}
-
-.green .modal img {
-  position: absolute;
-  top: -30px;
-  right: -30px;
-  width: 64px;
-  height: 64px;
-}
-
-@media (max-width: 650px) {
-  .green h1 {
-    font-size: 6em;
-  }
-  .green .modal {
-    font-size: 1rem;
-    width: 50ch;
+@media (max-width: 1190px) {
+  .green .green-info p {
+    font-size: 2.6rem;
+    width: 18ch;
   }
 }
 
-@media (max-width: 500px) {
-  .green .modal {
-    font-size: 1rem;
-    width: 40ch;
-    padding: 16px;
-  }
-  .green .modal img {
-    top: -22px;
-    right: -22px;
-    width: 48px;
-    height: 48px;
+@media (max-width: 980px) {
+  .green .green-info h1 {
+    margin-bottom: 24px;
   }
 }
 
-@media (max-width: 400px) {
-  .green h1 {
-    font-size: 4rem;
-  }
-  .green .modal p {
-    font-size: 1rem;
-  }
-  .green .modal img {
-    top: -15px;
-    right: -15px;
-    width: 32px;
-    height: 32px;
+@media (max-width: 980px) {
+  .green .green-info h1 {
+    font-size: 7rem;
   }
 }
