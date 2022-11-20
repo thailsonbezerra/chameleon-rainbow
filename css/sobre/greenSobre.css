@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Poppins:wght@400;700&display=swap");
 .green {
-  background: url("/img/sobre/green/greenbg.png") #03a678 no-repeat bottom left;
+  background: url("../../img/sobre/green/greenbg.png") #03a678 no-repeat bottom
+    left;
   background-size: cover;
 }
 
@@ -73,6 +74,12 @@
 }
 
 @media (max-width: 400px) {
+  .green h1 {
+    font-size: 4rem;
+  }
+  .green .modal p {
+    font-size: 1rem;
+  }
   .green .modal img {
     top: -15px;
     right: -15px;

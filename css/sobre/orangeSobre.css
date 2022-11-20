@@ -99,3 +99,17 @@
     gap: 20px;
   }
 }
+
+@media (max-width: 500px) {
+  .orange {
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr;
+  }
+  .orange .orange-right {
+    display: none;
+  }
+  .orange .orange-left {
+    grid-row-start: 2;
+    width: 50%;
+  }
+}
