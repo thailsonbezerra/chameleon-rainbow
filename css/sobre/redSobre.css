@@ -1,7 +1,8 @@
 .red {
-  background-image: linear-gradient(to right, #e1251b 50%, #fafafa 50%);
+  width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  background-image: linear-gradient(to right, #e1251b 50%, #fafafa 50%);
 }
 
 .red .imagem {
@@ -9,10 +10,19 @@
   background-size: contain;
 }
 
+.red .red-info {
+  background: url("../../img/sobre/red/bgRedLeft.png") no-repeat;
+  display: flex;
+  flex-direction: column;
+}
+
 .red .red-info,
 .red .red-associacao {
   align-self: center;
   padding: 60px;
+  height: 100%;
+  background-size: cover;
+  justify-content: center;
 }
 
 .red .red-info h3 {
@@ -28,11 +38,12 @@
   color: white;
   font-weight: bold;
   letter-spacing: 4px;
+  height: 100%;
+  width: 100%;
 }
 
 .red .red-associacao {
-  height: 100%;
-  background: url("../../img/sobre/red/danger.png") no-repeat bottom;
+  background: url("../../img/sobre/red/bgRedRight.png") no-repeat right;
   background-size: contain;
   display: flex;
   align-items: center;
@@ -96,7 +107,9 @@
   }
 
   .red .red-info {
+    background: url("../../img/sobre/red/bgRedTop.png") no-repeat right;
     text-align: center;
+    background-size: cover;
   }
 
   .red .red-info p {
@@ -104,6 +117,8 @@
   }
 
   .red .red-associacao {
+    background: url("../../img/sobre/red/danger.png") no-repeat right;
+    background-size: contain;
     background-position: bottom right;
   }
 
