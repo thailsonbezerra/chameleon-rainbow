@@ -1,0 +1,68 @@
+.indigo {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: url(../../img/sobre/indigo/bgIndigo.svg) no-repeat bottom left;
+  background-size: cover;
+}
+
+.indigo .title-indigo {
+  color: #fff;
+  font-size: 10rem;
+  letter-spacing: 1rem;
+  transform: rotate(-20deg);
+  position: absolute;
+  top: 32px;
+  left: 32px;
+}
+
+.indigo-right p,
+.indigo-left p {
+  color: #fff;
+  width: 50%;
+  font-size: 1.5rem;
+  margin-top: 80px;
+}
+
+.indigo-left {
+  display: flex;
+  justify-content: center;
+}
+
+.indigo-left p {
+  align-self: center;
+}
+.indigo img {
+  position: absolute;
+  width: 350px;
+  height: 350px;
+  left: 25%;
+  top: 3%;
+}
+/* .indigo .indigo-left {
+  color: #fff;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 1fr 1fr;
+} */
+
+/* .indigo .indigo-left p:first-child {
+  font-size: 1.4rem;
+  grid-column: 2;
+  grid-row: 1;
+  align-self: flex-end;
+}
+
+.indigo .indigo-left p:last-child {
+  font-size: 1.2rem;
+  grid-column: 1;
+  grid-row: 2;
+  align-self: center;
+  padding: 80px;
+} */
+.indigo .indigo-right {
+  background: url(../../img/sobre/indigo/chameleonIndigo2.png) no-repeat bottom
+    left;
+  background-size: contain;
+  display: start;
+}
