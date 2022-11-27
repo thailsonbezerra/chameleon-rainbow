@@ -1,0 +1,64 @@
+.violat {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+}
+
+.violat .violat-info {
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 80px;
+  font-family: sans-serif;
+  gap: 20px;
+}
+
+.violat .violat-info h3 {
+  border-bottom: 1.5px solid #fff;
+  font-size: 1.5rem;
+}
+
+.violat .violat-info p {
+  font-size: 3.5rem;
+  text-align: center;
+  font-weight: bold;
+}
+
+@media (max-width: 980px) {
+  .violat {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 2fr;
+    gap: 20px;
+  }
+  .violat-info {
+    grid-row: 1;
+  }
+
+  .violat picture {
+    display: flex;
+    justify-content: center;
+  }
+
+  .violat img {
+    width: 50%;
+  }
+}
+
+@media (max-width: 770px) {
+  .violat {
+    padding: 64px;
+  }
+  .violat .violat-info p {
+    font-size: 2rem;
+  }
+
+  .violat .violat-info h3 {
+    font-size: 1rem;
+  }
+
+  .violat img {
+    width: 70%;
+  }
+}
